@@ -54,7 +54,7 @@ defmodule Statuses.MixProject do
     [
       files: ["lib/statuses.ex", "mix.exs", "README.md", "statuses.json"],
       name: "statuses",
-      licenses: ["GNU GPL v2.0"],
+      licenses: ["GPL-2.0-or-later"],
       maintainers: ["dwyl"],
       links: %{"GitHub" => "https://github.com/dwyl/statuses"}
     ]
