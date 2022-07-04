@@ -10,10 +10,14 @@ defmodule Statuses.MixProject do
       deps: deps(),
       description: description(),
       package: package(),
+      aliases: aliases(),
       test_coverage: [tool: ExCoveralls],
       preferred_cli_env: [
+        c: :test,
         coveralls: :test,
         "coveralls.json": :test,
+        "coveralls.html": :test,
+        t: :test
       ]
     ]
   end
@@ -53,6 +57,19 @@ defmodule Statuses.MixProject do
       licenses: ["GNU GPL v2.0"],
       maintainers: ["dwyl"],
       links: %{"GitHub" => "https://github.com/dwyl/statuses"}
+    ]
+  end
+
+    # Aliases are shortcuts or tasks specific to the current project.
+  # For example, to install project dependencies and perform other setup tasks, run:
+  #
+  #     $ mix c
+  #
+  # See the documentation for `Mix` for more info on aliases.
+  defp aliases do
+    [
+      t: ["test"],
+      c: ["coveralls.html"],
     ]
   end
 end
