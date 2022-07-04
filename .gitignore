@@ -24,3 +24,8 @@ statuses-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+# Node for JSONLint
+node_modules
+# ignore noise
+package-lock.json
