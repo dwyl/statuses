@@ -4,21 +4,23 @@ defmodule Statuses do
   """
 
   @doc """
-  `parse_json/0` returns a list of maps containing statuses. <br />
+  `parse_json/0` returns a list of maps containing statuses. e.g:
 
-  The format returned is:
   ```elixir
   [
     %{
       id: "1",
-      text: "verified"
+      text: "verified",
+      "desc": "A person verified by a 3rd party OAuth provider"
     },
     ...
   ]
   ```
-  All statuses MUST have an `id` and `text` field. <br />
-  Ideally they should also have a `desc` (description), <br />
-  please help to expand/verify others. <br />
+
+  All statuses MUST have an `id` and `text` field.
+  Ideally they should also have a `desc` (description),
+  please help to expand/refine the description any status 
+  that is not well defined but avoid changing the `text` or `id`.
   """
   def parse_json do
     {:ok, cwd} = File.cwd
@@ -36,7 +38,7 @@ defmodule Statuses do
       # coveralls-ignore-stop
     end
   end
-
+  
   defp read_decode do
     File.read!("statuses.json") 
     |> Jason.decode!() 

@@ -2,7 +2,7 @@
   {
     "text": "verified", 
     "id": "1",
-    "desc": "People are verified once they confirm their email address"
+    "desc": "A person verified by a 3rd party OAuth provider or by confirming their email address"
   },
   {
     "text": "uncategorized", 
