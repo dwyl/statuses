@@ -33,8 +33,10 @@ anyone can contribute.
 # Who?
 
 This package is for us by us. <br />
-We don't 
-
+We don't expect anyone else to use it.
+But it's Open Source so that
+anyone using our Apps can view 
+and contribute to it.
 
 # How?
 ## Installation
