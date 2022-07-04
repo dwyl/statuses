@@ -4,29 +4,21 @@ defmodule Statuses do
   """
 
   @doc """
-  `parse_json` returns a list of maps containing quotes. <br />
+  `parse_json/0` returns a list of maps containing statuses. <br />
 
   The format returned is:
   ```elixir
   [
     %{
-      "author" => "Albert Einstein",
-      "text" => "Once we accept our limits, we go beyond them."
+      id: "1",
+      text: "verified"
     },
-    %{
-      "author" => "Peter Drucker",
-      "source" => "https://www.goodreads.com/quotes/784267",
-      "tags" => "time, management",
-      "text" => "Until we can manage time, we can manage nothing else."
-    }
-    %{...},
     ...
   ]
   ```
-  All quotes MUST have an `author` and `text` field. <br />
-  Some quotes have `tags` and `source`,
+  All statuses MUST have an `id` and `text` field. <br />
+  Ideally they should also have a `desc` (description), <br />
   please help to expand/verify others. <br />
-  see: https://github.com/nelsonic/quotes#contributing
   """
   def parse_json do
     {:ok, cwd} = File.cwd
