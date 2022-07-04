@@ -8,9 +8,9 @@ defmodule StatusesTest do
 
     # sample status we know is in the list
     sample =  %{
-      "id" => "1",
-      "text" => "verified"
-    } |> Useful.atomize_map_keys()
+      id: "1",
+      text: "verified"
+    }
 
     # find the sample quote in the List of Maps:
     [found] = Enum.map(list, fn q ->

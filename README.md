@@ -10,12 +10,12 @@
 
 </div>
 
-
-
 # Why?
 
 We found ourselves repating **`statuses`**
 in various projects.
+e.g:
+[auth/init/**statuses.ex**](https://github.com/dwyl/auth/blob/568d0fd7a4a4f7ec53514c76e0e263c3f82e61ca/lib/auth/init/statuses.ex#L3-L106)
 So we decided to 
 [**`"DRY"`**](https://en.wikipedia.org/wiki/Don't_repeat_yourself)
 and make this single-feature micro-package.
@@ -33,10 +33,12 @@ anyone can contribute.
 # Who?
 
 This package is for us by us. <br />
-We don't expect anyone else to use it.
-But it's Open Source so that
+We don't expect anyone else to use it, <br />
+but it's 
+[Open Source](https://github.com/dwyl/intellectual-property)
+so that
 anyone using our Apps can view 
-and contribute to it.
+and contribute to the list.
 
 # How?
 ## Installation
@@ -52,6 +54,17 @@ def deps do
   ]
 end
 ```
+
+## Usage
+
+```elixir
+statuses = Statuses.parse_json()
+# use them how you see fit
+```
+
+## Todo
+
+Add link to where this is used in MVP.
 
 Documentation available at: 
 [hexdocs.pm/statuses](https://hexdocs.pm/statuses)
