@@ -15,10 +15,12 @@
 We found ourselves repating **`statuses`**
 in various projects.
 e.g:
-[auth/init/**statuses.ex**](https://github.com/dwyl/auth/blob/568d0fd7a4a4f7ec53514c76e0e263c3f82e61ca/lib/auth/init/statuses.ex#L3-L106)
+[auth/init/**statuses.ex**](https://github.com/dwyl/auth/blob/568d0fd7a4a4f7ec53514c76e0e263c3f82e61ca/lib/auth/init/statuses.ex#L3-L106) <br />
 So we decided to 
-[**`"DRY"`**](https://en.wikipedia.org/wiki/Don't_repeat_yourself)
-and make this single-feature micro-package.
+[**`"DRY"`**](https://en.wikipedia.org/wiki/Don't_repeat_yourself) 
+it
+and make this single-feature micro-package
+we can reuse.
 # What?
 
 [`statuses.json`](https://github.com/dwyl/statuses/blob/main/statuses.json)
@@ -32,9 +34,9 @@ and means
 anyone can contribute.
 # Who?
 
-This package is for us by us. <br />
-We don't expect anyone else to use it, <br />
-but it's 
+This package is for us by us.
+We don't expect anyone else to use it.
+It's 
 [Open Source](https://github.com/dwyl/intellectual-property)
 so that
 anyone using our Apps can view 
