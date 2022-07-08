@@ -2,33 +2,24 @@ defmodule StatusesTest do
   use ExUnit.Case
   doctest Statuses
 
-  test "parse_json returns a list of maps containing statuses" do
-    list = Statuses.parse_json()
-    # assert Enum.count(list) == Utils.count()
-
+  test "get_statuses returns the list of statuses" do
+    list = Statuses.get_statuses()
     # sample status we know is in the list
-    sample =  %{
-      id: "1",
-      text: "verified"
+    sample = %Status{
+      desc:
+        "A person verified by a 3rd party OAuth provider or by confirming their email address",
+      code: 1,
+      text: :verified
     }
 
-    # find the sample quote in the List of Maps:
-    [found] = Enum.map(list, fn q ->
-      if q.text == sample.text do
-        q
-      end
-    end)
-    |> Enum.filter(& !is_nil(&1)) # filter out any nil values
-    assert sample.id == found.id # sample status was found in the list
+    assert Enum.member?(list, sample)
   end
 
-  test "all statuses have :id and :text property" do
-    Statuses.parse_json()
-    |> Enum.each(fn(q) ->
-      assert Map.has_key?(q, :id)
-      assert Map.has_key?(q, :text)
-      assert q.id > 0
-      assert String.length(q.text) > 1
-    end)
+  test "status_to_json returns the list of statuses as json" do
+    json = Statuses.statuses_to_json()
+    json_statuses = Jason.decode!(json)
+    statuses = Statuses.get_statuses()
+
+    assert length(json_statuses) == length(statuses)
   end
 end
