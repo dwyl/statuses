@@ -21,10 +21,11 @@ So we decided to
 it
 and make this single-feature micro-package
 we can reuse.
+
 # What?
 
-[`statuses.json`](https://github.com/dwyl/statuses/blob/main/statuses.json)
-is a maintainable `JSON` file
+[`statuses.json`](https://github.com/dwyl/statuses/blob/main/lib/statuses.ex)
+is a maintainable list of status structs
 that anyone can read 
 to be informed of **`statuses`**
 used in our App(s).
@@ -32,6 +33,7 @@ It makes it easier for us to keep **`statuses`**
 in one place 
 and means 
 anyone can contribute.
+
 # Who?
 
 This package is for us by us.
@@ -52,7 +54,7 @@ in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:statuses, "~> 1.0.1"},
+    {:statuses, "~> 1.1"},
   ]
 end
 ```
@@ -60,7 +62,7 @@ end
 ## Usage
 
 ```elixir
-statuses = Statuses.parse_json()
+statuses = Statuses.get_statuses()
 # use them how you see fit
 ```
 

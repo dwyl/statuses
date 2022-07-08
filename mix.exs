@@ -4,7 +4,7 @@ defmodule Statuses.MixProject do
   def project do
     [
       app: :statuses,
-      version: "1.0.1",
+      version: "1.1.0",
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -49,7 +49,7 @@ defmodule Statuses.MixProject do
 
   defp package() do
     [
-      files: ["lib/statuses.ex", "mix.exs", "README.md", "statuses.json"],
+      files: ["lib/status.ex", "lib/statuses.ex", "mix.exs", "README.md"],
       name: "statuses",
       licenses: ["GPL-2.0-or-later"],
       maintainers: ["dwyl"],
