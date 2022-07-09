@@ -4,7 +4,7 @@ defmodule Statuses.MixProject do
   def project do
     [
       app: :statuses,
-      version: "1.0.1",
+      version: "1.1.0",
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -35,24 +35,21 @@ defmodule Statuses.MixProject do
       # Parse JSON file: github.com/michalmuskala/jason
       {:jason, "~> 1.1"},
 
-      # https://github.com/dwyl/useful#atomize_map_keys1
-      {:useful, "~> 1.0.8"},
-
       # Create docs for publishing Hex.docs: github.com/elixir-lang/ex_doc
       {:ex_doc, "~> 0.28", only: :dev, runtime: false},
 
       # Check test coverage: github.com/parroty/excoveralls
-      {:excoveralls, "~> 0.14.3", only: :test},
+      {:excoveralls, "~> 0.14.3", only: :test}
     ]
   end
 
-    defp description() do
+  defp description() do
     "a collection of inspiring statuses and methods to return them."
   end
 
   defp package() do
     [
-      files: ["lib/statuses.ex", "mix.exs", "README.md", "statuses.json"],
+      files: ["lib/status.ex", "lib/statuses.ex", "mix.exs", "README.md"],
       name: "statuses",
       licenses: ["GPL-2.0-or-later"],
       maintainers: ["dwyl"],
@@ -60,7 +57,7 @@ defmodule Statuses.MixProject do
     ]
   end
 
-    # Aliases are shortcuts or tasks specific to the current project.
+  # Aliases are shortcuts or tasks specific to the current project.
   # For example, to install project dependencies and perform other setup tasks, run:
   #
   #     $ mix c
@@ -69,7 +66,7 @@ defmodule Statuses.MixProject do
   defp aliases do
     [
       t: ["test"],
-      c: ["coveralls.html"],
+      c: ["coveralls.html"]
     ]
   end
 end

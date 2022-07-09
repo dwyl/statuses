@@ -23,10 +23,6 @@ jobs:
           path: deps
           key: ${{ runner.os }}-mix-${{ hashFiles('**/mix.lock') }}
           restore-keys: ${{ runner.os }}-mix-
-      - name: Install Node.js Deps (JSON Lint)
-        run: npm install
-      - name: Run JSON Lint to confirm statuses.json is valid
-        run: npm run jsonlint
       - name: Install Elixir dependencies
         run: mix deps.get
       - name: Run Tests
