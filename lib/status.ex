@@ -4,7 +4,6 @@ defmodule Status do
   """
   @type t :: %Status{code: integer(), desc: String.t(), text: atom()}
   @enforce_keys [:code, :desc, :text]
-  @derive Jason.Encoder
 
   defstruct [:code, :desc, :text]
 end

@@ -26,7 +26,11 @@ defmodule Statuses do
         desc: "An App, Item or Person can be active; this is the default state for an App",
         text: :active
       },
-      %Status{code: 4, desc: "Items marked as done are complete", text: "done"},
+      %Status{
+        code: 4,
+        desc: "Items marked as done are complete", 
+        text: :done
+      },
       %Status{
         code: 5,
         desc: "A flagged App, Item or Person requires admin attention",
@@ -48,7 +52,11 @@ defmodule Statuses do
         desc: "An email that has been sent but not yet opened",
         text: :sent
       },
-      %Status{code: 9, desc: "When an email is opened by the recipient", text: :opened},
+      %Status{
+        code: 9, 
+        desc: "When an email is opened by the recipient", 
+        text: :opened
+      },
       %Status{
         code: 10,
         desc: "Temporary email bounce e.g. because inbox is full",
@@ -59,7 +67,11 @@ defmodule Statuses do
         desc: "Permanent email bounce e.g. when inbox doesn't exist",
         text: :bounce_permanent
       },
-      %Status{code: 200, desc: "successful HTTP request", text: :ok},
+      %Status{
+        code: 200, 
+        desc: "successful HTTP request", 
+        text: :ok
+      },
       %Status{
         code: 307,
         desc: "the request should be repeated with another URI",
@@ -80,8 +92,16 @@ defmodule Statuses do
         desc: "when authentication is required and has failed",
         text: :unauthorized
       },
-      %Status{code: 403, desc: "request forbidden", text: :forbidden},
-      %Status{code: 404, desc: "requested resource could not be found", text: :not_found},
+      %Status{
+        code: 403, 
+        desc: "request forbidden", 
+        text: :forbidden
+      },
+      %Status{
+        code: 404, 
+        desc: "requested resource could not be found",
+        text: :not_found
+      },
       %Status{
         code: 429,
         desc: "has sent too many requests in a given amount of time",
@@ -94,9 +114,4 @@ defmodule Statuses do
       }
     ]
   end
-
-  @doc """
-  Returns the list of statuses as json
-  """
-  def statuses_to_json(), do: Jason.encode!(get_statuses())
 end

@@ -32,9 +32,6 @@ defmodule Statuses.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # Parse JSON file: github.com/michalmuskala/jason
-      {:jason, "~> 1.1"},
-
       # Create docs for publishing Hex.docs: github.com/elixir-lang/ex_doc
       {:ex_doc, "~> 0.28", only: :dev, runtime: false},
 

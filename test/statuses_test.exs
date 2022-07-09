@@ -14,12 +14,4 @@ defmodule StatusesTest do
 
     assert Enum.member?(list, sample)
   end
-
-  test "status_to_json returns the list of statuses as json" do
-    json = Statuses.statuses_to_json()
-    json_statuses = Jason.decode!(json)
-    statuses = Statuses.get_statuses()
-
-    assert length(json_statuses) == length(statuses)
-  end
 end
