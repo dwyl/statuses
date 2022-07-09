@@ -54,7 +54,7 @@ in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:statuses, "~> 1.1"},
+    {:statuses, "~> 1.1.1"},
   ]
 end
 ```
