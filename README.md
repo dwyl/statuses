@@ -45,7 +45,10 @@ anyone using our Apps can view
 and contribute to the list.
 
 # How?
-## Installation
+
+## Elixir
+
+### Installation
 
 Add `statuses` 
 to your dependencies 
@@ -59,17 +62,44 @@ def deps do
 end
 ```
 
-## Usage
+### Usage
 
 ```elixir
 statuses = Statuses.get_statuses()
 # use them how you see fit
 ```
 
-## Todo
-
-Add link to where this is used in MVP.
-
 Documentation available at: 
 [hexdocs.pm/statuses](https://hexdocs.pm/statuses)
 
+
+## Dart
+
+### Installation
+
+You can run the following command
+to install the dependency.
+
+```sh
+flutter pub add statuses
+```
+
+Alternatively,
+add `statuses` 
+to your dependencies 
+in `pubspec.yml`:
+
+```dart
+dependencies:
+  statuses: ^1.0.0
+```
+
+### Usage
+
+```dart
+final statusesArray = Statuses.list()
+# use them how you see fit
+```
+
+Documentation available at: 
+[hexdocs.pm/statuses](https://hexdocs.pm/statuses)
