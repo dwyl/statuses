@@ -2,9 +2,11 @@
 
 # `statuses`
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/dwyl/statuses/ci.yml?label=build&style=flat-square&branch=main)
+![Elixir Build Status](https://img.shields.io/github/actions/workflow/status/dwyl/statuses/elixir.yml?label=Elixir&style=flat-square)
+![Dart Build Status](https://img.shields.io/github/actions/workflow/status/dwyl/statuses/dart.yml?label=Dart&style=flat-square)
 [![codecov.io](https://img.shields.io/codecov/c/github/dwyl/statuses/main.svg?style=flat-square)](http://codecov.io/github/dwyl/statuses?branch=main)
 [![Hex.pm](https://img.shields.io/hexpm/v/statuses?color=brightgreen&style=flat-square)](https://hex.pm/packages/statuses)
+[![pub package](https://img.shields.io/pub/v/statuses.svg?color=brightgreen&style=flat-square)](https://pub.dev/packages/statuses)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/dwyl/statuses#contributing)
 [![HitCount](http://hits.dwyl.com/dwyl/statuses.svg)](http://hits.dwyl.com/dwyl/statuses)
 
@@ -102,4 +104,4 @@ final statusesArray = Statuses.list()
 ```
 
 Documentation available at: 
-[hexdocs.pm/statuses](https://hexdocs.pm/statuses)
+[pub.dev/packages/statuses](https://pub.dev/packages/statuses)
