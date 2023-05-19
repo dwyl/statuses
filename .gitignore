@@ -29,3 +29,9 @@ statuses-*.tar
 node_modules
 # ignore noise
 package-lock.json
+
+# Dart package
+.dart_tool/
+pubspec.lock
+build
+coverage
