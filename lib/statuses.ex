@@ -26,12 +26,12 @@ defmodule Statuses do
 
       # coveralls-ignore-start
 
-      # temporarily `cd` into `deps/quotes` dir and read `quotes.json` file:
+      # temporarily `cd` into `deps/statuses` dir and read `statuses.json` file:
       false ->
-        File.cd!("deps/quotes")
+        File.cd!("deps/statuses")
 
         data =
-          File.read!("quotes.json")
+          File.read!("statuses.json")
           |> Jason.decode!()
 
         # change back into the root directory
