@@ -2,9 +2,11 @@
 
 # `statuses`
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/dwyl/statuses/ci.yml?label=build&style=flat-square&branch=main)
+![Elixir Build Status](https://img.shields.io/github/actions/workflow/status/dwyl/statuses/elixir.yml?label=Elixir&style=flat-square)
+![Dart Build Status](https://img.shields.io/github/actions/workflow/status/dwyl/statuses/dart.yml?label=Dart&style=flat-square)
 [![codecov.io](https://img.shields.io/codecov/c/github/dwyl/statuses/main.svg?style=flat-square)](http://codecov.io/github/dwyl/statuses?branch=main)
 [![Hex.pm](https://img.shields.io/hexpm/v/statuses?color=brightgreen&style=flat-square)](https://hex.pm/packages/statuses)
+[![pub package](https://img.shields.io/pub/v/statuses.svg?color=brightgreen&style=flat-square)](https://pub.dev/packages/statuses)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/dwyl/statuses#contributing)
 [![HitCount](http://hits.dwyl.com/dwyl/statuses.svg)](http://hits.dwyl.com/dwyl/statuses)
 
@@ -45,7 +47,10 @@ anyone using our Apps can view
 and contribute to the list.
 
 # How?
-## Installation
+
+## Elixir
+
+### Installation
 
 Add `statuses` 
 to your dependencies 
@@ -59,17 +64,44 @@ def deps do
 end
 ```
 
-## Usage
+### Usage
 
 ```elixir
 statuses = Statuses.get_statuses()
 # use them how you see fit
 ```
 
-## Todo
-
-Add link to where this is used in MVP.
-
 Documentation available at: 
 [hexdocs.pm/statuses](https://hexdocs.pm/statuses)
 
+
+## Dart
+
+### Installation
+
+You can run the following command
+to install the dependency.
+
+```sh
+flutter pub add statuses
+```
+
+Alternatively,
+add `statuses` 
+to your dependencies 
+in `pubspec.yml`:
+
+```dart
+dependencies:
+  statuses: ^1.0.0
+```
+
+### Usage
+
+```dart
+final statusesArray = Statuses.list()
+# use them how you see fit
+```
+
+Documentation available at: 
+[pub.dev/packages/statuses](https://pub.dev/packages/statuses)
